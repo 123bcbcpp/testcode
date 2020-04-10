@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+
+    <meta charset="UTF-8">
+    <title>查看信息</title>
+    <script src="#"></script>
+    <link type="text/css" rel="styleSheet" href="#"/>
+</head>
+<body>
+    <div>
+        <table width="800px" border="1" cellpadding="0" style="margin:10px auto">
+                <tr>
+                    <th>题目</th>
+                    <th>答案</th>
+                    <th>时间</th>
+                </tr>
+                <tr th:each="item:${user}">
+                    <td th:text="${item.tm}"></td>
+                    <td th:text="${item.ask}"></td>
+                    <td th:text="${item.date}"></td>
+                </tr>
+        </table>
+    </div>
+</body>
+</html>
